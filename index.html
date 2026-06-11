@@ -1,1 +1,2174 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Органикалық химия | КТ-ға дайындық</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(16, 185, 129, 0.16), transparent 34%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.14), transparent 32%),
+        linear-gradient(135deg, #f8fffb 0%, #f5f9ff 48%, #ffffff 100%);
+      color: #172033;
+      line-height: 1.62;
+      padding-bottom: 40px;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .hero {
+      border-radius: 30px;
+      padding: 30px 18px;
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(5, 150, 105, 0.96), rgba(37, 99, 235, 0.92), rgba(124, 58, 237, 0.88)),
+        url("data:image/svg+xml,%3Csvg width='180' height='180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.18)' stroke-width='2'%3E%3Ccircle cx='90' cy='90' r='12'/%3E%3Ccircle cx='45' cy='45' r='8'/%3E%3Ccircle cx='135' cy='45' r='8'/%3E%3Ccircle cx='45' cy='135' r='8'/%3E%3Ccircle cx='135' cy='135' r='8'/%3E%3Cpath d='M57 50l24 30M123 50l-24 30M57 130l24-30M123 130l-24-30M90 78v-35M90 102v35'/%3E%3C/g%3E%3C/svg%3E");
+      box-shadow: 0 18px 45px rgba(37, 99, 235, 0.22);
+      margin-bottom: 14px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      font-size: 13px;
+      font-weight: 850;
+      margin-bottom: 12px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1 {
+      font-size: clamp(25px, 5vw, 44px);
+      line-height: 1.08;
+      margin-bottom: 12px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      max-width: 900px;
+      font-size: clamp(15px, 2.5vw, 18px);
+      opacity: 0.96;
+      margin-bottom: 16px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.23);
+      border-radius: 18px;
+      padding: 12px;
+      min-height: 84px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .hero-card span {
+      font-size: 13px;
+      opacity: 0.92;
+    }
+
+    .rights {
+      margin: 12px 0 16px;
+      border-radius: 18px;
+      padding: 13px 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .top-nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 255, 251, 0.88);
+      backdrop-filter: blur(14px);
+      padding: 8px 0;
+      margin-bottom: 16px;
+    }
+
+    .top-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 2px 8px;
+    }
+
+    .top-nav a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: #047857;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(16, 185, 129, 0.18);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.06);
+      white-space: nowrap;
+    }
+
+    .top-nav a:hover {
+      background: #ecfdf5;
+      border-color: #6ee7b7;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .intro-card,
+    .study-block {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(16, 185, 129, 0.14);
+      box-shadow: 0 16px 38px rgba(16, 185, 129, 0.08);
+    }
+
+    .intro-card {
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .intro-card h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: #047857;
+    }
+
+    .intro-card p {
+      margin-bottom: 10px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      font-size: 12.5px;
+      font-weight: 820;
+    }
+
+    .study-block {
+      scroll-margin-top: 92px;
+      border-radius: 24px;
+      margin: 18px 0;
+      overflow: hidden;
+    }
+
+    .study-block-header {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px;
+      background: linear-gradient(135deg, #d1fae5, #dbeafe, #ede9fe);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.12);
+    }
+
+    .block-number {
+      flex: 0 0 auto;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, #059669, #2563eb, #7c3aed);
+      font-size: 21px;
+      font-weight: 950;
+    }
+
+    .study-block-header h2 {
+      font-size: clamp(20px, 3.2vw, 28px);
+      color: #047857;
+      line-height: 1.18;
+      margin-bottom: 6px;
+    }
+
+    .study-block-header p {
+      color: #475569;
+      font-size: 14.5px;
+    }
+
+    .mini-tabs {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .mini-tabs button {
+      flex: 0 0 auto;
+      border: none;
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 880;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .mini-tabs button.active {
+      background: linear-gradient(135deg, #059669, #2563eb, #7c3aed);
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 16px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    details {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 13px 14px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+      color: #047857;
+      font-size: 15.5px;
+    }
+
+    details p {
+      margin-top: 9px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .formula-list,
+    .term-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .formula {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #10b981;
+      border-radius: 16px;
+      padding: 12px;
+      font-weight: 850;
+      color: #0f172a;
+      overflow-x: auto;
+    }
+
+    .term {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 12px;
+    }
+
+    .term b {
+      color: #047857;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .term p {
+      color: #475569;
+      font-size: 14.5px;
+    }
+
+    .question {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 13px;
+    }
+
+    .question p {
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .option {
+      display: block;
+      border: 1px solid #dbe3ec;
+      border-radius: 14px;
+      padding: 10px 11px;
+      margin: 8px 0;
+      cursor: pointer;
+      background: #f8fafc;
+      color: #334155;
+      font-size: 14.5px;
+    }
+
+    .option input {
+      margin-right: 8px;
+      transform: translateY(1px);
+    }
+
+    .option.correct {
+      border-color: #16a34a;
+      background: #dcfce7;
+      color: #14532d;
+      font-weight: 800;
+    }
+
+    .option.wrong {
+      border-color: #dc2626;
+      background: #fee2e2;
+      color: #7f1d1d;
+      font-weight: 800;
+    }
+
+    .explain {
+      display: none;
+      margin-top: 10px;
+      border-radius: 14px;
+      padding: 11px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #064e3b;
+      font-size: 14px;
+    }
+
+    .explain.show {
+      display: block;
+    }
+
+    .check-btn {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      background: linear-gradient(135deg, #059669, #2563eb, #7c3aed);
+      color: white;
+      font-size: 16px;
+      font-weight: 950;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.22);
+    }
+
+    .result {
+      display: none;
+      margin-bottom: 14px;
+      border-radius: 18px;
+      padding: 14px;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      color: #14532d;
+    }
+
+    .result.show {
+      display: block;
+    }
+
+    .score {
+      font-size: 26px;
+      font-weight: 950;
+      margin-bottom: 4px;
+    }
+
+    .copyright-note {
+      margin-top: 22px;
+      border-radius: 18px;
+      padding: 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      font-weight: 750;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin: 18px 0 8px;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 10px;
+      }
+
+      .hero {
+        border-radius: 22px;
+        padding: 22px 15px;
+      }
+
+      .hero-grid,
+      .intro,
+      .formula-list,
+      .term-list {
+        grid-template-columns: 1fr;
+      }
+
+      .study-block-header {
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .block-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        font-size: 19px;
+      }
+
+      .tab-content {
+        padding: 13px;
+      }
+
+      .top-nav a {
+        font-size: 12.5px;
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <div class="hero-badge">Органикалық химия · КТ-ға дайындық</div>
+
+      <h1>Органикалық химия бойынша қысқаша дайындық сайты</h1>
+
+      <p>
+        Бұл сайт органикалық химияның негізгі тақырыптарын жүйелі қайталауға арналған:
+        органикалық қосылыстардың құрылысы, изомерия, көмірсутектер, функционалдық
+        топтар, оттекті және азотты қосылыстар, сапалық реакциялар және зертханалық
+        белгілер.
+      </p>
+
+      <div class="hero-grid">
+        <div class="hero-card">
+          <b>Құрылыс</b>
+          <span>Көміртек қаңқасы, изомерия, гомологтар</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Көмірсутектер</b>
+          <span>Алкандар, алкендер, алкиндер, арендер</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Функционалдық топтар</b>
+          <span>Спирт, альдегид, қышқыл, амин</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Практика</b>
+          <span>Сапалық реакциялар және есептер</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="rights">
+      Автор: Назерке. Барлық құқық қорғалған. Материалды рұқсатсыз көшіруге,
+      сатуға, қайта таратуға немесе коммерциялық мақсатта қолдануға болмайды.
+    </div>
+
+    <div class="top-nav-wrap">
+      <nav class="top-nav">
+        <a href="#block1">1. Негіздер</a>
+        <a href="#block2">2. Алифатты көмірсутектер</a>
+        <a href="#block3">3. Ароматты және циклді қосылыстар</a>
+        <a href="#block4">4. Оттекті қосылыстар</a>
+        <a href="#block5">5. Азотты қосылыстар</a>
+        <a href="#block6">6. Сапалық реакциялар</a>
+        <a href="#block7">7. Жинақ тест</a>
+      </nav>
+    </div>
+
+    <section class="intro">
+      <div class="intro-card">
+        <h2>Сайттың бағыты</h2>
+        <p>
+          Материал КТ-ға дайындық үшін қысқа әрі нақты түрде берілген. Әр блокта
+          теория, маңызды формула/реакция, терминдер және тест сұрақтары бар.
+        </p>
+        <p>
+          Негізгі әдеби бағыттар: Битемирова, Сейітжанов, Назарбекова.
+        </p>
+      </div>
+
+      <div class="intro-card">
+        <h2>Қамтылатын тақырыптар</h2>
+        <div class="tag-list">
+          <span class="tag">Органикалық қосылыс</span>
+          <span class="tag">Көміртек қаңқасы</span>
+          <span class="tag">Изомерия</span>
+          <span class="tag">Гомологтық қатар</span>
+          <span class="tag">Функционалдық топ</span>
+          <span class="tag">Алкандар</span>
+          <span class="tag">Алкендер</span>
+          <span class="tag">Алкиндер</span>
+          <span class="tag">Арендер</span>
+          <span class="tag">Спирттер</span>
+          <span class="tag">Альдегидтер</span>
+          <span class="tag">Карбон қышқылдары</span>
+          <span class="tag">Аминдер</span>
+          <span class="tag">Сапалық реакциялар</span>
+        </div>
+      </div>
+    </section>
+        <section id="block1" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">1</div>
+        <div>
+          <h2>Органикалық химия негіздері</h2>
+          <p>
+            Органикалық қосылыстар, көміртектің валенттілігі, құрылымдық формула,
+            гомологтық қатар, изомерия, радикал, функционалдық топ және органикалық
+            заттарды жіктеу.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block1', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block1', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block1', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block1', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Органикалық химия пәні</summary>
+          <p>
+            Органикалық химия көміртек қосылыстарының құрылысын, қасиеттерін,
+            алыну жолдарын және реакцияларын зерттейді. Органикалық заттардың
+            негізгі ерекшелігі — көміртек атомдарының өзара байланысып, түзу,
+            тармақталған және циклді тізбек түзе алуы.
+          </p>
+        </details>
+
+        <details>
+          <summary>Көміртектің валенттілігі</summary>
+          <p>
+            Көміртек органикалық қосылыстарда көбіне төрт валентті болады. Ол басқа
+            көміртек атомдарымен және сутек, оттек, азот, галоген сияқты элементтермен
+            коваленттік байланыс түзеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Құрылымдық формула</summary>
+          <p>
+            Құрылымдық формула молекуладағы атомдардың байланысу ретін көрсетеді.
+            Органикалық химияда бірдей молекулалық формулаға ие заттардың құрылысы
+            әртүрлі болуы мүмкін, сондықтан құрылымдық формуланы түсіну маңызды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Гомологтық қатар</summary>
+          <p>
+            Гомологтық қатар — құрамы бір-бірінен CH₂ тобына айырмашылық жасайтын,
+            құрылысы және химиялық қасиеттері ұқсас қосылыстар қатары. Мысалы,
+            алкандардың жалпы формуласы CₙH₂ₙ₊₂.
+          </p>
+        </details>
+
+        <details>
+          <summary>Изомерия</summary>
+          <p>
+            Изомерия — молекулалық формуласы бірдей, бірақ құрылысы немесе кеңістікте
+            орналасуы әртүрлі заттардың болуы. Изомерлердің физикалық және химиялық
+            қасиеттері әртүрлі болуы мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Функционалдық топ</summary>
+          <p>
+            Функционалдық топ — органикалық қосылыстың негізгі химиялық қасиетін
+            анықтайтын атом немесе атомдар тобы. Мысалы, спирттерде —OH, альдегидтерде
+            —CHO, карбон қышқылдарында —COOH, аминдерде —NH₂ тобы болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Органикалық заттарды жіктеу</summary>
+          <p>
+            Органикалық заттар көмірсутектер және көмірсутек туындылары болып бөлінеді.
+            Көмірсутектер тек көміртек пен сутектен тұрады. Көмірсутек туындыларында
+            оттек, азот, галоген сияқты басқа элементтер де болуы мүмкін.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Көміртек валенттілігі → IV</div>
+          <div class="formula">Алкандар: CₙH₂ₙ₊₂</div>
+          <div class="formula">Алкендер: CₙH₂ₙ</div>
+          <div class="formula">Алкиндер: CₙH₂ₙ₋₂</div>
+          <div class="formula">Циклоалкандар: CₙH₂ₙ</div>
+          <div class="formula">Арендер: CₙH₂ₙ₋₆</div>
+          <div class="formula">Гомологтар → айырмасы CH₂</div>
+          <div class="formula">Спирттер → R–OH</div>
+          <div class="formula">Альдегидтер → R–CHO</div>
+          <div class="formula">Карбон қышқылдары → R–COOH</div>
+          <div class="formula">Аминдер → R–NH₂</div>
+          <div class="formula">Галогентуындылар → R–Hal</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Органикалық қосылыс</b>
+            <p>Көміртек атомдары негізгі орын алатын қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Құрылымдық формула</b>
+            <p>Молекуладағы атомдардың байланысу ретін көрсететін формула.</p>
+          </div>
+
+          <div class="term">
+            <b>Гомолог</b>
+            <p>Бір гомологтық қатардағы, құрамы CH₂ тобына айырмашылық жасайтын қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Изомер</b>
+            <p>Молекулалық формуласы бірдей, құрылысы әртүрлі зат.</p>
+          </div>
+
+          <div class="term">
+            <b>Функционалдық топ</b>
+            <p>Заттың негізгі химиялық қасиетін анықтайтын атомдар тобы.</p>
+          </div>
+
+          <div class="term">
+            <b>Радикал</b>
+            <p>Органикалық молекуладан бір сутек атомы алынғанда түзілетін қалдық.</p>
+          </div>
+
+          <div class="term">
+            <b>Көмірсутек</b>
+            <p>Тек көміртек пен сутектен тұратын органикалық қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Туынды</b>
+            <p>Көмірсутектегі сутек атомының басқа атом немесе топпен алмасуынан түзілген қосылыс.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block1Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Органикалық химия негізінен нені зерттейді?</p>
+          <label class="option"><input type="radio" name="o1q1" value="0"> Тек металдардың кристалдық торын</label>
+          <label class="option"><input type="radio" name="o1q1" value="1"> Тек инертті газдардың қасиетін</label>
+          <label class="option"><input type="radio" name="o1q1" value="2"> Көміртек қосылыстарының құрылысы мен қасиеттерін</label>
+          <label class="option"><input type="radio" name="o1q1" value="3"> Тек тұздардың гидролизін</label>
+          <label class="option"><input type="radio" name="o1q1" value="4"> Ядролық реакциялардың механизмін</label>
+          <div class="explain">Дұрыс жауап: C. Органикалық химия көміртек қосылыстарының құрылысын, қасиетін және реакцияларын зерттейді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Көміртек органикалық қосылыстарда көбіне қандай валенттілік көрсетеді?</p>
+          <label class="option"><input type="radio" name="o1q2" value="0"> I</label>
+          <label class="option"><input type="radio" name="o1q2" value="1"> II</label>
+          <label class="option"><input type="radio" name="o1q2" value="2"> III</label>
+          <label class="option"><input type="radio" name="o1q2" value="3"> V</label>
+          <label class="option"><input type="radio" name="o1q2" value="4"> IV</label>
+          <div class="explain">Дұрыс жауап: E. Көміртек төрт коваленттік байланыс түзе алады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Алкандардың жалпы формуласы:</p>
+          <label class="option"><input type="radio" name="o1q3" value="0"> CₙH₂ₙ₊₂</label>
+          <label class="option"><input type="radio" name="o1q3" value="1"> CₙH₂ₙ</label>
+          <label class="option"><input type="radio" name="o1q3" value="2"> CₙH₂ₙ₋₂</label>
+          <label class="option"><input type="radio" name="o1q3" value="3"> CₙH₂ₙ₋₆</label>
+          <label class="option"><input type="radio" name="o1q3" value="4"> CₙHₙ</label>
+          <div class="explain">Дұрыс жауап: A. Қаныққан ашық тізбекті көмірсутектер — алкандар, жалпы формуласы CₙH₂ₙ₊₂.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Гомологтық қатар мүшелері бір-бірінен қандай топқа айырмашылық жасайды?</p>
+          <label class="option"><input type="radio" name="o1q4" value="0"> OH</label>
+          <label class="option"><input type="radio" name="o1q4" value="1"> COOH</label>
+          <label class="option"><input type="radio" name="o1q4" value="2"> NH₂</label>
+          <label class="option"><input type="radio" name="o1q4" value="3"> CH₂</label>
+          <label class="option"><input type="radio" name="o1q4" value="4"> CHO</label>
+          <div class="explain">Дұрыс жауап: D. Гомологтар құрамы бір-бірінен CH₂ тобына айырмашылық жасайды.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Изомерлерге сәйкес келетін сипаттама:</p>
+          <label class="option"><input type="radio" name="o1q5" value="0"> Молекулалық формуласы әртүрлі, қасиеті бірдей заттар</label>
+          <label class="option"><input type="radio" name="o1q5" value="1"> Молекулалық формуласы бірдей, құрылысы әртүрлі заттар</label>
+          <label class="option"><input type="radio" name="o1q5" value="2"> Тек бір атомнан тұратын заттар</label>
+          <label class="option"><input type="radio" name="o1q5" value="3"> Тек металдардан тұратын қосылыстар</label>
+          <label class="option"><input type="radio" name="o1q5" value="4"> Бірдей құрылымды, массасы әртүрлі изотоптар</label>
+          <div class="explain">Дұрыс жауап: B. Изомерлердің формуласы бірдей, бірақ құрылымы немесе кеңістікте орналасуы әртүрлі болады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Спирттерге тән функционалдық топ:</p>
+          <label class="option"><input type="radio" name="o1q6" value="0"> —CHO</label>
+          <label class="option"><input type="radio" name="o1q6" value="1"> —COOH</label>
+          <label class="option"><input type="radio" name="o1q6" value="2"> —NH₂</label>
+          <label class="option"><input type="radio" name="o1q6" value="3"> —NO₂</label>
+          <label class="option"><input type="radio" name="o1q6" value="4"> —OH</label>
+          <div class="explain">Дұрыс жауап: E. Спирттердің функционалдық тобы — гидроксил тобы, яғни —OH.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Карбон қышқылдарына тән функционалдық топ:</p>
+          <label class="option"><input type="radio" name="o1q7" value="0"> —OH</label>
+          <label class="option"><input type="radio" name="o1q7" value="1"> —CHO</label>
+          <label class="option"><input type="radio" name="o1q7" value="2"> —COOH</label>
+          <label class="option"><input type="radio" name="o1q7" value="3"> —NH₂</label>
+          <label class="option"><input type="radio" name="o1q7" value="4"> —Cl</label>
+          <div class="explain">Дұрыс жауап: C. Карбон қышқылдарының негізгі тобы — карбоксил тобы, —COOH.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. C₂H₆ және C₃H₈ бір қатарға жатады, себебі олар:</p>
+          <label class="option"><input type="radio" name="o1q8" value="0"> Бір гомологтық қатар мүшелері</label>
+          <label class="option"><input type="radio" name="o1q8" value="1"> Бір заттың изотоптары</label>
+          <label class="option"><input type="radio" name="o1q8" value="2"> Бірдей молекулалық формулаға ие</label>
+          <label class="option"><input type="radio" name="o1q8" value="3"> Бірдей құрылымдық формулаға ие</label>
+          <label class="option"><input type="radio" name="o1q8" value="4"> Екеуі де карбон қышқылдары</label>
+          <div class="explain">Дұрыс жауап: A. Этан мен пропан алкандар қатарына жатады және бір-бірінен CH₂ тобына айырмашылық жасайды.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block1')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block2" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">2</div>
+        <div>
+          <h2>Алифатты көмірсутектер</h2>
+          <p>
+            Алкандар, алкендер, алкиндер, олардың жалпы формулалары, байланыс түрлері,
+            изомериясы, алынуы, жануы, орынбасу және қосылу реакциялары.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block2', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block2', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block2', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block2', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Алифатты көмірсутектер</summary>
+          <p>
+            Алифатты көмірсутектер — молекуласында ашық көміртек тізбегі болатын
+            органикалық қосылыстар. Олар қаныққан және қанықпаған көмірсутектерге
+            бөлінеді. Қаныққан көмірсутектерде дара байланыс, қанықпағандарда қос
+            немесе үш байланыс болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Алкандар</summary>
+          <p>
+            Алкандар — молекуласында тек дара σ-байланыстар болатын қаныққан
+            көмірсутектер. Жалпы формуласы CₙH₂ₙ₊₂. Алкандарға метан, этан, пропан,
+            бутан жатады. Олар химиялық тұрғыдан салыстырмалы тұрақты, бірақ жану
+            және галогендеу реакцияларына түседі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Алкендер</summary>
+          <p>
+            Алкендер — молекуласында бір қос байланысы бар қанықпаған көмірсутектер.
+            Жалпы формуласы CₙH₂ₙ. Қос байланыс бір σ және бір π байланыстан тұрады.
+            Алкендер қосылу реакцияларына оңай түседі және бром суын түссіздендіреді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Алкиндер</summary>
+          <p>
+            Алкиндер — молекуласында бір үш байланысы бар қанықпаған көмірсутектер.
+            Жалпы формуласы CₙH₂ₙ₋₂. Үш байланыс бір σ және екі π байланыстан тұрады.
+            Ең қарапайым өкілі — ацетилен C₂H₂.
+          </p>
+        </details>
+
+        <details>
+          <summary>Жану реакциясы</summary>
+          <p>
+            Көмірсутектер толық жанғанда көмірқышқыл газы және су түзіледі. Жану
+            реакциялары экзотермиялық болады. Оттек жеткіліксіз болса, CO немесе
+            күйе түзілуі мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Қосылу реакциялары</summary>
+          <p>
+            Алкендер мен алкиндер қос байланыс немесе үш байланыс бойынша сутек,
+            галоген, галогенсутек және су қосып алады. Бұл реакциялар қанықпаған
+            көмірсутектерге тән.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Алкандар: CₙH₂ₙ₊₂</div>
+          <div class="formula">Алкендер: CₙH₂ₙ</div>
+          <div class="formula">Алкиндер: CₙH₂ₙ₋₂</div>
+          <div class="formula">CH₄ + 2O₂ → CO₂ + 2H₂O</div>
+          <div class="formula">C₂H₄ + H₂ → C₂H₆</div>
+          <div class="formula">C₂H₄ + Br₂ → C₂H₄Br₂</div>
+          <div class="formula">C₂H₂ + 2H₂ → C₂H₆</div>
+          <div class="formula">Алкан + Cl₂ → хлоралкан + HCl</div>
+          <div class="formula">Қос байланыс → 1σ + 1π</div>
+          <div class="formula">Үш байланыс → 1σ + 2π</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Алкан</b>
+            <p>Тек дара байланыстары бар қаныққан көмірсутек.</p>
+          </div>
+
+          <div class="term">
+            <b>Алкен</b>
+            <p>Молекуласында бір қос байланысы бар көмірсутек.</p>
+          </div>
+
+          <div class="term">
+            <b>Алкин</b>
+            <p>Молекуласында бір үш байланысы бар көмірсутек.</p>
+          </div>
+
+          <div class="term">
+            <b>Қаныққан көмірсутек</b>
+            <p>Көміртек атомдары арасында тек дара байланыс болатын көмірсутек.</p>
+          </div>
+
+          <div class="term">
+            <b>Қанықпаған көмірсутек</b>
+            <p>Қос немесе үш байланысы бар көмірсутек.</p>
+          </div>
+
+          <div class="term">
+            <b>Галогендеу</b>
+            <p>Органикалық қосылысқа галоген атомының ену реакциясы.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block2Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Алкандардың жалпы формуласы:</p>
+          <label class="option"><input type="radio" name="o2q1" value="0"> CₙH₂ₙ</label>
+          <label class="option"><input type="radio" name="o2q1" value="1"> CₙH₂ₙ₋₂</label>
+          <label class="option"><input type="radio" name="o2q1" value="2"> CₙH₂ₙ₊₂</label>
+          <label class="option"><input type="radio" name="o2q1" value="3"> CₙH₂ₙ₋₆</label>
+          <label class="option"><input type="radio" name="o2q1" value="4"> CₙHₙ</label>
+          <div class="explain">Дұрыс жауап: C. Алкандар — қаныққан ашық тізбекті көмірсутектер, формуласы CₙH₂ₙ₊₂.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. C₃H₆ формуласына сәйкес көмірсутек класы:</p>
+          <label class="option"><input type="radio" name="o2q2" value="0"> Алкан</label>
+          <label class="option"><input type="radio" name="o2q2" value="1"> Алкин</label>
+          <label class="option"><input type="radio" name="o2q2" value="2"> Арен</label>
+          <label class="option"><input type="radio" name="o2q2" value="3"> Спирт</label>
+          <label class="option"><input type="radio" name="o2q2" value="4"> Алкен немесе циклоалкан</label>
+          <div class="explain">Дұрыс жауап: E. CₙH₂ₙ формуласы алкендерге және циклоалкандарға сәйкес келеді.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Қай зат алкиндерге жатады?</p>
+          <label class="option"><input type="radio" name="o2q3" value="0"> C₂H₂</label>
+          <label class="option"><input type="radio" name="o2q3" value="1"> C₂H₆</label>
+          <label class="option"><input type="radio" name="o2q3" value="2"> C₂H₄</label>
+          <label class="option"><input type="radio" name="o2q3" value="3"> CH₄</label>
+          <label class="option"><input type="radio" name="o2q3" value="4"> C₆H₆</label>
+          <div class="explain">Дұрыс жауап: A. C₂H₂ — ацетилен, алкиндердің ең қарапайым өкілі.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Этеннің бром суын түссіздендіру себебі:</p>
+          <label class="option"><input type="radio" name="o2q4" value="0"> Этен қаныққан көмірсутек болғандықтан</label>
+          <label class="option"><input type="radio" name="o2q4" value="1"> Этенде тек дара байланыс болғандықтан</label>
+          <label class="option"><input type="radio" name="o2q4" value="2"> Этен суда тұнба түзетіндіктен</label>
+          <label class="option"><input type="radio" name="o2q4" value="3"> Қос байланыс бойынша Br₂ қосып алатындықтан</label>
+          <label class="option"><input type="radio" name="o2q4" value="4"> Этеннің құрамында оттек болғандықтан</label>
+          <div class="explain">Дұрыс жауап: D. Алкендер қос байланыс бойынша галогендерді қосып алып, бром суын түссіздендіреді.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Метан толық жанғанда түзілетін өнімдер:</p>
+          <label class="option"><input type="radio" name="o2q5" value="0"> CO және H₂</label>
+          <label class="option"><input type="radio" name="o2q5" value="1"> CO₂ және H₂O</label>
+          <label class="option"><input type="radio" name="o2q5" value="2"> C және H₂</label>
+          <label class="option"><input type="radio" name="o2q5" value="3"> CH₃OH және O₂</label>
+          <label class="option"><input type="radio" name="o2q5" value="4"> HCHO және H₂</label>
+          <div class="explain">Дұрыс жауап: B. Көмірсутектер толық жанғанда CO₂ және H₂O түзіледі.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. 1 моль C₂H₄ толық гидрленгенде түзілетін этан мөлшері:</p>
+          <label class="option"><input type="radio" name="o2q6" value="0"> 0.25 моль</label>
+          <label class="option"><input type="radio" name="o2q6" value="1"> 0.50 моль</label>
+          <label class="option"><input type="radio" name="o2q6" value="2"> 1.50 моль</label>
+          <label class="option"><input type="radio" name="o2q6" value="3"> 2.00 моль</label>
+          <label class="option"><input type="radio" name="o2q6" value="4"> 1.00 моль</label>
+          <div class="explain">Дұрыс жауап: E. C₂H₄ + H₂ → C₂H₆. Қатынас 1:1, сондықтан 1 моль этеннен 1 моль этан түзіледі.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Үш байланыстағы σ және π байланыстар саны:</p>
+          <label class="option"><input type="radio" name="o2q7" value="0"> 3σ және 0π</label>
+          <label class="option"><input type="radio" name="o2q7" value="1"> 2σ және 1π</label>
+          <label class="option"><input type="radio" name="o2q7" value="2"> 1σ және 2π</label>
+          <label class="option"><input type="radio" name="o2q7" value="3"> 0σ және 3π</label>
+          <label class="option"><input type="radio" name="o2q7" value="4"> 1σ және 1π</label>
+          <div class="explain">Дұрыс жауап: C. Үш байланыс бір σ және екі π байланыстан тұрады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Алкандарға тән реакция түрі:</p>
+          <label class="option"><input type="radio" name="o2q8" value="0"> Орынбасу</label>
+          <label class="option"><input type="radio" name="o2q8" value="1"> Қосылу</label>
+          <label class="option"><input type="radio" name="o2q8" value="2"> Полимерлену ғана</label>
+          <label class="option"><input type="radio" name="o2q8" value="3"> Гидратация ғана</label>
+          <label class="option"><input type="radio" name="o2q8" value="4"> Этерификация ғана</label>
+          <div class="explain">Дұрыс жауап: A. Алкандар қаныққан, сондықтан галогендермен көбіне орынбасу реакциясына түседі.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block2')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block3" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">3</div>
+        <div>
+          <h2>Ароматты және циклді қосылыстар</h2>
+          <p>
+            Циклоалкандар, бензол, арендер, ароматтылық, бензол сақинасы,
+            орынбасу реакциялары, нитрлеу, галогендеу және ароматты қосылыстардың
+            негізгі қасиеттері.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block3', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block3', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block3', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block3', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Циклді қосылыстар</summary>
+          <p>
+            Циклді қосылыстарда көміртек атомдары тұйық сақина түзеді. Циклоалкандардың
+            жалпы формуласы CₙH₂ₙ. Олар құрамдық формуласы бойынша алкендерге ұқсас
+            болғанымен, құрылысында қос байланыс емес, сақина болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ароматты қосылыстар</summary>
+          <p>
+            Ароматты қосылыстардың негізгі өкілі — бензол C₆H₆. Бензол молекуласында
+            алты көміртек атомы жазық сақина түзеді, ал π-электрондар сақина бойында
+            делокалданған болады. Осы құрылым бензолға ерекше тұрақтылық береді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Бензолдың қасиеттері</summary>
+          <p>
+            Бензол қанықпаған формулаға ие болғанымен, қарапайым алкендер сияқты
+            қосылу реакцияларына оңай түспейді. Ол көбіне электрофильді орынбасу
+            реакцияларына түседі: нитрлеу, галогендеу, сульфирлеу.
+          </p>
+        </details>
+
+        <details>
+          <summary>Нитрлеу реакциясы</summary>
+          <p>
+            Бензол концентрлі азот және күкірт қышқылдарының қатысында нитробензол
+            түзеді. Бұл реакция ароматты сақинадағы сутек атомының нитротопқа
+            орынбасуына негізделеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Галогендеу реакциясы</summary>
+          <p>
+            Бензол хлормен немесе броммен катализатор қатысында әрекеттесіп
+            галогенбензол түзеді. Катализатор ретінде FeCl₃ немесе FeBr₃ қолданылуы
+            мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Толуол</summary>
+          <p>
+            Толуол — метилбензол, формуласы C₆H₅CH₃. Ол бензолдың гомологы болып
+            саналады. Метил тобы бензол сақинасындағы орынбасу реакцияларының бағытына
+            әсер етеді.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Циклоалкандар: CₙH₂ₙ</div>
+          <div class="formula">Бензол: C₆H₆</div>
+          <div class="formula">Арендер: CₙH₂ₙ₋₆</div>
+          <div class="formula">Толуол: C₆H₅CH₃</div>
+          <div class="formula">C₆H₆ + HNO₃ → C₆H₅NO₂ + H₂O</div>
+          <div class="formula">C₆H₆ + Cl₂ → C₆H₅Cl + HCl</div>
+          <div class="formula">Бензол → электрофильді орынбасу</div>
+          <div class="formula">π-электрондар → делокалданған жүйе</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Циклоалкан</b>
+            <p>Көміртек атомдары сақина түзетін қаныққан көмірсутек.</p>
+          </div>
+
+          <div class="term">
+            <b>Арен</b>
+            <p>Бензол сақинасы бар ароматты көмірсутек.</p>
+          </div>
+
+          <div class="term">
+            <b>Бензол</b>
+            <p>C₆H₆ формулалы ароматты көмірсутек.</p>
+          </div>
+
+          <div class="term">
+            <b>Ароматтылық</b>
+            <p>Делокалданған π-электрондық жүйеге байланысты ерекше тұрақтылық.</p>
+          </div>
+
+          <div class="term">
+            <b>Нитрлеу</b>
+            <p>Органикалық молекулаға —NO₂ тобының ену реакциясы.</p>
+          </div>
+
+          <div class="term">
+            <b>Толуол</b>
+            <p>Метилбензол, бензолдың гомологы.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block3Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Циклоалкандардың жалпы формуласы:</p>
+          <label class="option"><input type="radio" name="o3q1" value="0"> CₙH₂ₙ₊₂</label>
+          <label class="option"><input type="radio" name="o3q1" value="1"> CₙH₂ₙ₋₂</label>
+          <label class="option"><input type="radio" name="o3q1" value="2"> CₙH₂ₙ</label>
+          <label class="option"><input type="radio" name="o3q1" value="3"> CₙH₂ₙ₋₆</label>
+          <label class="option"><input type="radio" name="o3q1" value="4"> CₙHₙ</label>
+          <div class="explain">Дұрыс жауап: C. Циклоалкандардың формуласы CₙH₂ₙ, себебі сақина түзілуі екі сутекке азайтады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Бензолдың молекулалық формуласы:</p>
+          <label class="option"><input type="radio" name="o3q2" value="0"> C₆H₁₂</label>
+          <label class="option"><input type="radio" name="o3q2" value="1"> C₆H₁₄</label>
+          <label class="option"><input type="radio" name="o3q2" value="2"> C₆H₁₀</label>
+          <label class="option"><input type="radio" name="o3q2" value="3"> C₅H₆</label>
+          <label class="option"><input type="radio" name="o3q2" value="4"> C₆H₆</label>
+          <div class="explain">Дұрыс жауап: E. Бензол — C₆H₆ формулалы ароматты көмірсутек.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Бензолға тән негізгі реакция түрі:</p>
+          <label class="option"><input type="radio" name="o3q3" value="0"> Орынбасу</label>
+          <label class="option"><input type="radio" name="o3q3" value="1"> Қосылу ғана</label>
+          <label class="option"><input type="radio" name="o3q3" value="2"> Гидролиз ғана</label>
+          <label class="option"><input type="radio" name="o3q3" value="3"> Нейтралдану ғана</label>
+          <label class="option"><input type="radio" name="o3q3" value="4"> Сабындану ғана</label>
+          <div class="explain">Дұрыс жауап: A. Бензол сақинасы тұрақты, сондықтан көбіне электрофильді орынбасу реакцияларына түседі.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Бензол нитрленгенде түзілетін негізгі өнім:</p>
+          <label class="option"><input type="radio" name="o3q4" value="0"> Хлорбензол</label>
+          <label class="option"><input type="radio" name="o3q4" value="1"> Толуол</label>
+          <label class="option"><input type="radio" name="o3q4" value="2"> Фенол</label>
+          <label class="option"><input type="radio" name="o3q4" value="3"> Нитробензол</label>
+          <label class="option"><input type="radio" name="o3q4" value="4"> Анилин</label>
+          <div class="explain">Дұрыс жауап: D. C₆H₆ + HNO₃ → C₆H₅NO₂ + H₂O.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Толуолдың формуласы:</p>
+          <label class="option"><input type="radio" name="o3q5" value="0"> C₆H₆</label>
+          <label class="option"><input type="radio" name="o3q5" value="1"> C₆H₅CH₃</label>
+          <label class="option"><input type="radio" name="o3q5" value="2"> C₆H₅OH</label>
+          <label class="option"><input type="radio" name="o3q5" value="3"> C₆H₅NH₂</label>
+          <label class="option"><input type="radio" name="o3q5" value="4"> C₆H₅NO₂</label>
+          <div class="explain">Дұрыс жауап: B. Толуол — метилбензол, формуласы C₆H₅CH₃.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Бензол сақинасының тұрақтылығы немен түсіндіріледі?</p>
+          <label class="option"><input type="radio" name="o3q6" value="0"> Молекулада тек иондық байланыс болуымен</label>
+          <label class="option"><input type="radio" name="o3q6" value="1"> Көміртек атомдарының валенттілігі екіге тең болуымен</label>
+          <label class="option"><input type="radio" name="o3q6" value="2"> Молекула құрамында металл ионы болуымен</label>
+          <label class="option"><input type="radio" name="o3q6" value="3"> Бензолдың суда толық диссоциациялануымен</label>
+          <label class="option"><input type="radio" name="o3q6" value="4"> π-электрондардың сақина бойында делокалдануымен</label>
+          <div class="explain">Дұрыс жауап: E. Делокалданған π-жүйе бензол молекуласына ерекше тұрақтылық береді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Бензолдың хлормен орынбасу реакциясына қажет катализатор:</p>
+          <label class="option"><input type="radio" name="o3q7" value="0"> Ni</label>
+          <label class="option"><input type="radio" name="o3q7" value="1"> Pt</label>
+          <label class="option"><input type="radio" name="o3q7" value="2"> FeCl₃</label>
+          <label class="option"><input type="radio" name="o3q7" value="3"> H₂SO₄ сұйылтылған</label>
+          <label class="option"><input type="radio" name="o3q7" value="4"> KMnO₄</label>
+          <div class="explain">Дұрыс жауап: C. Бензолды хлорлау үшін Lewis қышқылы ретінде FeCl₃ катализаторы қолданылады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Қай зат арендерге жатады?</p>
+          <label class="option"><input type="radio" name="o3q8" value="0"> C₆H₆</label>
+          <label class="option"><input type="radio" name="o3q8" value="1"> C₂H₆</label>
+          <label class="option"><input type="radio" name="o3q8" value="2"> C₂H₄</label>
+          <label class="option"><input type="radio" name="o3q8" value="3"> C₃H₈</label>
+          <label class="option"><input type="radio" name="o3q8" value="4"> C₂H₂</label>
+          <div class="explain">Дұрыс жауап: A. C₆H₆ — бензол, ароматты көмірсутек.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block3')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block4" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">4</div>
+        <div>
+          <h2>Оттекті органикалық қосылыстар</h2>
+          <p>
+            Спирттер, фенолдар, альдегидтер, кетондар, карбон қышқылдары, күрделі
+            эфирлер, олардың функционалдық топтары, қасиеттері және сапалық реакциялары.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block4', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block4', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block4', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block4', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Оттекті органикалық қосылыстар</summary>
+          <p>
+            Оттекті органикалық қосылыстар құрамында көміртек, сутекпен қатар оттек
+            атомы болатын заттар. Олардың қасиеті функционалдық топқа тәуелді:
+            спирттерде —OH, альдегидтерде —CHO, кетондарда &gt;C=O, карбон
+            қышқылдарында —COOH, күрделі эфирлерде —COO— тобы болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Спирттер</summary>
+          <p>
+            Спирттер — молекуласында көмірсутек радикалымен байланысқан гидроксил
+            тобы бар қосылыстар. Бір атомды спирттердің жалпы формуласы CₙH₂ₙ₊₁OH.
+            Этанол — C₂H₅OH, суда жақсы ериді және жанғыш зат.
+          </p>
+        </details>
+
+        <details>
+          <summary>Көпатомды спирттер</summary>
+          <p>
+            Көпатомды спирттерде бірнеше гидроксил тобы болады. Глицерин — үшатомды
+            спирт, формуласы C₃H₅(OH)₃. Көпатомды спирттер мыс(II) гидроксидімен
+            әрекеттесіп ашық көк ерітінді бере алады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Фенол</summary>
+          <p>
+            Фенол — бензол сақинасымен тікелей байланысқан —OH тобы бар қосылыс.
+            Формуласы C₆H₅OH. Фенол спирттерге қарағанда қышқылдық қасиетті айқынырақ
+            көрсетеді және FeCl₃ ерітіндісімен күлгін түс береді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Альдегидтер</summary>
+          <p>
+            Альдегидтерде —CHO тобы болады. Олар оңай тотығып карбон қышқылдарына
+            айналады. Альдегидтерге “күміс айна” реакциясы және Cu(OH)₂-пен қыздырғанда
+            кірпіш-қызыл Cu₂O тұнбасының түзілуі тән.
+          </p>
+        </details>
+
+        <details>
+          <summary>Карбон қышқылдары</summary>
+          <p>
+            Карбон қышқылдары —COOH тобына ие. Олар қышқылдық қасиет көрсетеді:
+            металдармен, негіздік оксидтермен, сілтілермен және карбонаттармен
+            әрекеттеседі. Сірке қышқылының формуласы CH₃COOH.
+          </p>
+        </details>
+
+        <details>
+          <summary>Күрделі эфирлер</summary>
+          <p>
+            Күрделі эфирлер карбон қышқылы мен спирттің әрекеттесуінен түзіледі.
+            Бұл реакция этерификация деп аталады. Көптеген күрделі эфирлердің жағымды
+            иісі болады.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Спирттер → R–OH</div>
+          <div class="formula">Бір атомды спирттер: CₙH₂ₙ₊₁OH</div>
+          <div class="formula">Этанол: C₂H₅OH</div>
+          <div class="formula">Глицерин: C₃H₅(OH)₃</div>
+          <div class="formula">Фенол: C₆H₅OH</div>
+          <div class="formula">Альдегидтер → R–CHO</div>
+          <div class="formula">Кетондар → R–CO–R</div>
+          <div class="formula">Карбон қышқылдары → R–COOH</div>
+          <div class="formula">Сірке қышқылы: CH₃COOH</div>
+          <div class="formula">Күрделі эфир → R–COO–R'</div>
+          <div class="formula">C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O</div>
+          <div class="formula">CH₃COOH + NaOH → CH₃COONa + H₂O</div>
+          <div class="formula">CH₃COOH + C₂H₅OH ⇄ CH₃COOC₂H₅ + H₂O</div>
+          <div class="formula">Альдегид + [O] → карбон қышқылы</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Спирт</b>
+            <p>Құрамында көмірсутек радикалымен байланысқан —OH тобы бар қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Фенол</b>
+            <p>—OH тобы бензол сақинасымен тікелей байланысқан қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Альдегид</b>
+            <p>Құрамында —CHO тобы бар органикалық қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Кетон</b>
+            <p>Карбонил тобы екі көмірсутек радикалымен байланысқан қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Карбон қышқылы</b>
+            <p>Құрамында —COOH тобы бар қышқылдық қасиетті органикалық қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Этерификация</b>
+            <p>Карбон қышқылы мен спирттен күрделі эфир түзілу реакциясы.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block4Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Спирттерге тән функционалдық топ:</p>
+          <label class="option"><input type="radio" name="o4q1" value="0"> —CHO</label>
+          <label class="option"><input type="radio" name="o4q1" value="1"> —COOH</label>
+          <label class="option"><input type="radio" name="o4q1" value="2"> —OH</label>
+          <label class="option"><input type="radio" name="o4q1" value="3"> —NH₂</label>
+          <label class="option"><input type="radio" name="o4q1" value="4"> —NO₂</label>
+          <div class="explain">Дұрыс жауап: C. Спирттердің негізгі функционалдық тобы — гидроксил тобы.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Этанолдың формуласы:</p>
+          <label class="option"><input type="radio" name="o4q2" value="0"> CH₃OH</label>
+          <label class="option"><input type="radio" name="o4q2" value="1"> CH₃CHO</label>
+          <label class="option"><input type="radio" name="o4q2" value="2"> CH₃COOH</label>
+          <label class="option"><input type="radio" name="o4q2" value="3"> C₆H₅OH</label>
+          <label class="option"><input type="radio" name="o4q2" value="4"> C₂H₅OH</label>
+          <div class="explain">Дұрыс жауап: E. Этанол — екі көміртекті бір атомды спирт, формуласы C₂H₅OH.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Глицерин қандай қосылысқа жатады?</p>
+          <label class="option"><input type="radio" name="o4q3" value="0"> Үшатомды спирт</label>
+          <label class="option"><input type="radio" name="o4q3" value="1"> Альдегид</label>
+          <label class="option"><input type="radio" name="o4q3" value="2"> Кетон</label>
+          <label class="option"><input type="radio" name="o4q3" value="3"> Арен</label>
+          <label class="option"><input type="radio" name="o4q3" value="4"> Алкин</label>
+          <div class="explain">Дұрыс жауап: A. Глицерин молекуласында үш —OH тобы бар.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Фенолды анықтауға қолданылатын реактив:</p>
+          <label class="option"><input type="radio" name="o4q4" value="0"> AgNO₃ аммиактағы ерітіндісі</label>
+          <label class="option"><input type="radio" name="o4q4" value="1"> Na₂CO₃</label>
+          <label class="option"><input type="radio" name="o4q4" value="2"> BaCl₂</label>
+          <label class="option"><input type="radio" name="o4q4" value="3"> FeCl₃</label>
+          <label class="option"><input type="radio" name="o4q4" value="4"> KMnO₄ тек қышқыл ортада</label>
+          <div class="explain">Дұрыс жауап: D. Фенол FeCl₃ ерітіндісімен күлгін түс береді.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Альдегидтерге тән функционалдық топ:</p>
+          <label class="option"><input type="radio" name="o4q5" value="0"> —OH</label>
+          <label class="option"><input type="radio" name="o4q5" value="1"> —CHO</label>
+          <label class="option"><input type="radio" name="o4q5" value="2"> —COOH</label>
+          <label class="option"><input type="radio" name="o4q5" value="3"> —NH₂</label>
+          <label class="option"><input type="radio" name="o4q5" value="4"> —COO—</label>
+          <div class="explain">Дұрыс жауап: B. Альдегидтердің функционалдық тобы — альдегид тобы, —CHO.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. “Күміс айна” реакциясы қай класқа тән?</p>
+          <label class="option"><input type="radio" name="o4q6" value="0"> Алкандар</label>
+          <label class="option"><input type="radio" name="o4q6" value="1"> Арендер</label>
+          <label class="option"><input type="radio" name="o4q6" value="2"> Спирттер</label>
+          <label class="option"><input type="radio" name="o4q6" value="3"> Күрделі эфирлер</label>
+          <label class="option"><input type="radio" name="o4q6" value="4"> Альдегидтер</label>
+          <div class="explain">Дұрыс жауап: E. Альдегидтер оңай тотығады және Толленс реактивімен күміс айна береді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Карбон қышқылдарына тән топ:</p>
+          <label class="option"><input type="radio" name="o4q7" value="0"> —OH</label>
+          <label class="option"><input type="radio" name="o4q7" value="1"> —CHO</label>
+          <label class="option"><input type="radio" name="o4q7" value="2"> —COOH</label>
+          <label class="option"><input type="radio" name="o4q7" value="3"> —NH₂</label>
+          <label class="option"><input type="radio" name="o4q7" value="4"> —Cl</label>
+          <div class="explain">Дұрыс жауап: C. Карбон қышқылдарының функционалдық тобы — карбоксил тобы.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. CH₃COOH + C₂H₅OH реакциясында түзілетін органикалық өнім:</p>
+          <label class="option"><input type="radio" name="o4q8" value="0"> CH₃COOC₂H₅</label>
+          <label class="option"><input type="radio" name="o4q8" value="1"> CH₃CHO</label>
+          <label class="option"><input type="radio" name="o4q8" value="2"> CH₃OH</label>
+          <label class="option"><input type="radio" name="o4q8" value="3"> C₂H₄</label>
+          <label class="option"><input type="radio" name="o4q8" value="4"> C₆H₆</label>
+          <div class="explain">Дұрыс жауап: A. Сірке қышқылы мен этанол этерификация реакциясында этил ацетатын түзеді.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block4')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block5" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">5</div>
+        <div>
+          <h2>Азотты органикалық қосылыстар</h2>
+          <p>
+            Аминдер, аминқышқылдар, нитроқосылыстар, анилин, ақуыздар, олардың
+            құрылысы, негіздік қасиеті, функционалдық топтары және сапалық белгілері.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block5', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block5', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block5', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block5', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Азотты органикалық қосылыстар</summary>
+          <p>
+            Азотты органикалық қосылыстар құрамында азот атомы бар органикалық заттар.
+            Оларға аминдер, аминқышқылдар, нитроқосылыстар, амидтер және ақуыздар
+            жатады. Олардың қасиеті азотты функционалдық топқа байланысты.
+          </p>
+        </details>
+
+        <details>
+          <summary>Аминдер</summary>
+          <p>
+            Аминдер — аммиак молекуласындағы сутек атомдарының көмірсутек радикалдарымен
+            алмасуынан түзілген қосылыстар. Аминдер негіздік қасиет көрсетеді, себебі
+            азот атомында бос электрон жұбы бар.
+          </p>
+        </details>
+
+        <details>
+          <summary>Анилин</summary>
+          <p>
+            Анилин — ароматты амин, формуласы C₆H₅NH₂. Ол бензол сақинасымен
+            байланысқан амин тобына ие. Анилин бояғыштар, дәрілік заттар және
+            органикалық синтез үшін маңызды аралық зат.
+          </p>
+        </details>
+
+        <details>
+          <summary>Нитроқосылыстар</summary>
+          <p>
+            Нитроқосылыстар құрамында —NO₂ тобы бар органикалық заттар. Нитробензол
+            бензолды нитрлеу арқылы алынады және кейін тотықсыздану арқылы анилинге
+            айналуы мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Аминқышқылдар</summary>
+          <p>
+            Аминқышқылдар молекуласында амин тобы —NH₂ және карбоксил тобы —COOH
+            қатар кездеседі. Сондықтан олар амфотерлі қасиет көрсетеді: қышқылдармен
+            де, негіздермен де әрекеттесе алады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ақуыздар</summary>
+          <p>
+            Ақуыздар — аминқышқыл қалдықтарынан құралған жоғары молекулалы табиғи
+            қосылыстар. Аминқышқылдар өзара пептидтік байланыс арқылы қосылады.
+            Ақуыздарды анықтауда биурет және ксантопротеин реакциялары қолданылады.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Аминдер → R–NH₂</div>
+          <div class="formula">Метиламин → CH₃NH₂</div>
+          <div class="formula">Анилин → C₆H₅NH₂</div>
+          <div class="formula">Нитроқосылыс → R–NO₂</div>
+          <div class="formula">Нитробензол → C₆H₅NO₂</div>
+          <div class="formula">Аминқышқыл → NH₂–R–COOH</div>
+          <div class="formula">Глицин → NH₂CH₂COOH</div>
+          <div class="formula">Пептидтік байланыс → –CO–NH–</div>
+          <div class="formula">C₆H₆ + HNO₃ → C₆H₅NO₂ + H₂O</div>
+          <div class="formula">C₆H₅NO₂ + [H] → C₆H₅NH₂</div>
+          <div class="formula">R–NH₂ + HCl → R–NH₃Cl</div>
+          <div class="formula">Аминқышқылдар → амфотерлі</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Амин</b>
+            <p>Аммиак туындысы, құрамында амин тобы бар органикалық қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Амин тобы</b>
+            <p>—NH₂ функционалдық тобы.</p>
+          </div>
+
+          <div class="term">
+            <b>Анилин</b>
+            <p>C₆H₅NH₂ формулалы ароматты амин.</p>
+          </div>
+
+          <div class="term">
+            <b>Нитроқосылыс</b>
+            <p>Құрамында —NO₂ тобы бар органикалық қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Аминқышқыл</b>
+            <p>Құрамында —NH₂ және —COOH топтары бар қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Пептидтік байланыс</b>
+            <p>Аминқышқыл қалдықтарын байланыстыратын —CO–NH— байланысы.</p>
+          </div>
+
+          <div class="term">
+            <b>Ақуыз</b>
+            <p>Аминқышқыл қалдықтарынан құралған жоғары молекулалы табиғи қосылыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Амфотерлік</b>
+            <p>Қышқылдық та, негіздік те қасиет көрсету қабілеті.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block5Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Аминдерге тән функционалдық топ:</p>
+          <label class="option"><input type="radio" name="o5q1" value="0"> —OH</label>
+          <label class="option"><input type="radio" name="o5q1" value="1"> —COOH</label>
+          <label class="option"><input type="radio" name="o5q1" value="2"> —NH₂</label>
+          <label class="option"><input type="radio" name="o5q1" value="3"> —CHO</label>
+          <label class="option"><input type="radio" name="o5q1" value="4"> —COO—</label>
+          <div class="explain">Дұрыс жауап: C. Аминдердің негізгі функционалдық тобы — амин тобы, —NH₂.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Анилиннің формуласы:</p>
+          <label class="option"><input type="radio" name="o5q2" value="0"> C₆H₆</label>
+          <label class="option"><input type="radio" name="o5q2" value="1"> C₆H₅OH</label>
+          <label class="option"><input type="radio" name="o5q2" value="2"> C₆H₅NO₂</label>
+          <label class="option"><input type="radio" name="o5q2" value="3"> C₆H₅CH₃</label>
+          <label class="option"><input type="radio" name="o5q2" value="4"> C₆H₅NH₂</label>
+          <div class="explain">Дұрыс жауап: E. Анилин — амин тобы бар ароматты қосылыс, формуласы C₆H₅NH₂.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Нитроқосылыстарға тән топ:</p>
+          <label class="option"><input type="radio" name="o5q3" value="0"> —NO₂</label>
+          <label class="option"><input type="radio" name="o5q3" value="1"> —NH₂</label>
+          <label class="option"><input type="radio" name="o5q3" value="2"> —OH</label>
+          <label class="option"><input type="radio" name="o5q3" value="3"> —COOH</label>
+          <label class="option"><input type="radio" name="o5q3" value="4"> —CHO</label>
+          <div class="explain">Дұрыс жауап: A. Нитроқосылыстар құрамында нитро тобы —NO₂ болады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Аминдердің негіздік қасиеті немен түсіндіріледі?</p>
+          <label class="option"><input type="radio" name="o5q4" value="0"> Молекулада карбоксил тобы болуымен</label>
+          <label class="option"><input type="radio" name="o5q4" value="1"> Молекулада тек көміртек пен сутек болуымен</label>
+          <label class="option"><input type="radio" name="o5q4" value="2"> Көміртек атомының төрт валенттілігімен ғана</label>
+          <label class="option"><input type="radio" name="o5q4" value="3"> Азот атомындағы бос электрон жұбымен</label>
+          <label class="option"><input type="radio" name="o5q4" value="4"> Молекулада бензол сақинасының болмауымен</label>
+          <div class="explain">Дұрыс жауап: D. Аминдердегі азот атомы бос электрон жұбы арқылы протонды байланыстыра алады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Аминқышқылдарға тән функционалдық топтар:</p>
+          <label class="option"><input type="radio" name="o5q5" value="0"> —OH және —CHO</label>
+          <label class="option"><input type="radio" name="o5q5" value="1"> —NH₂ және —COOH</label>
+          <label class="option"><input type="radio" name="o5q5" value="2"> —NO₂ және —Cl</label>
+          <label class="option"><input type="radio" name="o5q5" value="3"> —COO— және —CHO</label>
+          <label class="option"><input type="radio" name="o5q5" value="4"> —SH және —Br ғана</label>
+          <div class="explain">Дұрыс жауап: B. Аминқышқылдарда амин тобы және карбоксил тобы қатар болады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Глициннің формуласы:</p>
+          <label class="option"><input type="radio" name="o5q6" value="0"> CH₃COOH</label>
+          <label class="option"><input type="radio" name="o5q6" value="1"> C₂H₅OH</label>
+          <label class="option"><input type="radio" name="o5q6" value="2"> C₆H₅NH₂</label>
+          <label class="option"><input type="radio" name="o5q6" value="3"> CH₃CHO</label>
+          <label class="option"><input type="radio" name="o5q6" value="4"> NH₂CH₂COOH</label>
+          <div class="explain">Дұрыс жауап: E. Глицин — ең қарапайым аминқышқыл, формуласы NH₂CH₂COOH.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Пептидтік байланыс:</p>
+          <label class="option"><input type="radio" name="o5q7" value="0"> —O—</label>
+          <label class="option"><input type="radio" name="o5q7" value="1"> —COO—</label>
+          <label class="option"><input type="radio" name="o5q7" value="2"> —CO–NH—</label>
+          <label class="option"><input type="radio" name="o5q7" value="3"> —C≡C—</label>
+          <label class="option"><input type="radio" name="o5q7" value="4"> —NO₂</label>
+          <div class="explain">Дұрыс жауап: C. Ақуыздарда аминқышқыл қалдықтары —CO–NH— пептидтік байланысы арқылы қосылады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Аминқышқылдардың амфотерлі болуының себебі:</p>
+          <label class="option"><input type="radio" name="o5q8" value="0"> Құрамында —NH₂ және —COOH топтарының қатар болуы</label>
+          <label class="option"><input type="radio" name="o5q8" value="1"> Құрамында тек көмірсутек радикалы болуы</label>
+          <label class="option"><input type="radio" name="o5q8" value="2"> Бензол сақинасының болуы</label>
+          <label class="option"><input type="radio" name="o5q8" value="3"> Қос байланыстың болуы</label>
+          <label class="option"><input type="radio" name="o5q8" value="4"> Суда мүлде ерімеуі</label>
+          <div class="explain">Дұрыс жауап: A. —NH₂ негіздік, —COOH қышқылдық қасиет береді.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block5')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block6" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">6</div>
+        <div>
+          <h2>Сапалық реакциялар және зертханалық белгілер</h2>
+          <p>
+            Органикалық заттарды тәжірибе арқылы анықтау: қанықпаған көмірсутектер,
+            фенол, альдегид, көпатомды спирт, карбон қышқылы, ақуыз және аминқышқылдар.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block6', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block6', 'formula')">Реакция</button>
+        <button onclick="openTab(event, 'block6', 'terms')">Белгі</button>
+        <button onclick="openTab(event, 'block6', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Сапалық реакция ұғымы</summary>
+          <p>
+            Сапалық реакция — белгілі бір затты немесе функционалдық топты анықтауға
+            мүмкіндік беретін реакция. Органикалық химияда түс өзгеруі, тұнба түзілуі,
+            иіс, газ бөлінуі немесе ерітіндінің түссізденуі маңызды белгі ретінде
+            қолданылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Қанықпаған көмірсутектерді анықтау</summary>
+          <p>
+            Алкендер мен алкиндер қос немесе үш байланыс арқылы бром суын түссіздендіреді.
+            Сонымен қатар олар KMnO₄ ерітіндісін де түссіздендіруі мүмкін. Бұл реакциялар
+            қанықпаған байланыстың бар екенін көрсетеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Көпатомды спирттер</summary>
+          <p>
+            Көпатомды спирттер, мысалы глицерин, жаңа тұндырылған Cu(OH)₂-пен әрекеттесіп
+            ашық көк ерітінді түзеді. Бұл көп гидроксил тобының болуына байланысты.
+          </p>
+        </details>
+
+        <details>
+          <summary>Фенолды анықтау</summary>
+          <p>
+            Фенол FeCl₃ ерітіндісімен күлгін түс береді. Бұл реакция фенолдық гидроксил
+            тобын анықтауға қолданылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Альдегидтерді анықтау</summary>
+          <p>
+            Альдегидтерге “күміс айна” реакциясы тән. Сондай-ақ альдегидтер Cu(OH)₂-пен
+            қыздырғанда кірпіш-қызыл Cu₂O тұнбасын береді. Бұл альдегидтердің оңай
+            тотығуымен байланысты.
+          </p>
+        </details>
+
+        <details>
+          <summary>Карбон қышқылдарын анықтау</summary>
+          <p>
+            Карбон қышқылдары карбонаттармен әрекеттескенде көмірқышқыл газы бөлінеді.
+            Мысалы, сірке қышқылы натрий карбонатымен әрекеттескенде CO₂ газы бөлінеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ақуыздарды анықтау</summary>
+          <p>
+            Ақуыздарды анықтауда биурет реакциясы және ксантопротеин реакциясы маңызды.
+            Биурет реакциясында сілтілік ортада Cu²⁺ иондары ақуызбен күлгін түс береді.
+            Ксантопротеин реакциясында концентрлі азот қышқылы әсерінен сары түс пайда
+            болуы мүмкін.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Алкен + Br₂ суы → түссіздену</div>
+          <div class="formula">Алкин + Br₂ суы → түссіздену</div>
+          <div class="formula">C₂H₄ + Br₂ → C₂H₄Br₂</div>
+          <div class="formula">Глицерин + Cu(OH)₂ → ашық көк ерітінді</div>
+          <div class="formula">Фенол + FeCl₃ → күлгін түс</div>
+          <div class="formula">Альдегид + [Ag(NH₃)₂]OH → Ag↓</div>
+          <div class="formula">Альдегид + Cu(OH)₂ → Cu₂O↓</div>
+          <div class="formula">CH₃COOH + Na₂CO₃ → CH₃COONa + CO₂↑ + H₂O</div>
+          <div class="formula">Ақуыз + Cu²⁺/сілті → күлгін түс</div>
+          <div class="formula">Ақуыз + HNO₃ конц. → сары түс</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Бром суының түссізденуі</b>
+            <p>Қанықпаған байланыс бар екенін көрсететін белгі.</p>
+          </div>
+
+          <div class="term">
+            <b>Күміс айна</b>
+            <p>Альдегидтерге тән сапалық реакция.</p>
+          </div>
+
+          <div class="term">
+            <b>Cu₂O тұнбасы</b>
+            <p>Альдегидтер Cu(OH)₂-пен қыздырғанда түзетін кірпіш-қызыл тұнба.</p>
+          </div>
+
+          <div class="term">
+            <b>Күлгін түс</b>
+            <p>Фенолдың FeCl₃-пен немесе ақуыздың биурет реакциясымен беретін белгісі.</p>
+          </div>
+
+          <div class="term">
+            <b>CO₂ бөлінуі</b>
+            <p>Карбон қышқылының карбонатпен әрекеттесу белгісі.</p>
+          </div>
+
+          <div class="term">
+            <b>Биурет реакциясы</b>
+            <p>Ақуыздарды анықтауға қолданылатын күлгін түсті реакция.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block6Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Бром суын түссіздендіретін зат:</p>
+          <label class="option"><input type="radio" name="o6q1" value="0"> Метан</label>
+          <label class="option"><input type="radio" name="o6q1" value="1"> Этан</label>
+          <label class="option"><input type="radio" name="o6q1" value="2"> Этен</label>
+          <label class="option"><input type="radio" name="o6q1" value="3"> Пропан</label>
+          <label class="option"><input type="radio" name="o6q1" value="4"> Бутан</label>
+          <div class="explain">Дұрыс жауап: C. Этенде қос байланыс бар, сондықтан Br₂ қосып алып бром суын түссіздендіреді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Фенолды анықтауға қолданылатын реактив:</p>
+          <label class="option"><input type="radio" name="o6q2" value="0"> Na₂CO₃</label>
+          <label class="option"><input type="radio" name="o6q2" value="1"> AgNO₃</label>
+          <label class="option"><input type="radio" name="o6q2" value="2"> BaCl₂</label>
+          <label class="option"><input type="radio" name="o6q2" value="3"> HCl</label>
+          <label class="option"><input type="radio" name="o6q2" value="4"> FeCl₃</label>
+          <div class="explain">Дұрыс жауап: E. Фенол FeCl₃ ерітіндісімен күлгін түс береді.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. “Күміс айна” реакциясы қай заттар тобына тән?</p>
+          <label class="option"><input type="radio" name="o6q3" value="0"> Альдегидтер</label>
+          <label class="option"><input type="radio" name="o6q3" value="1"> Алкандар</label>
+          <label class="option"><input type="radio" name="o6q3" value="2"> Арендер</label>
+          <label class="option"><input type="radio" name="o6q3" value="3"> Карбонаттар</label>
+          <label class="option"><input type="radio" name="o6q3" value="4"> Инертті газдар</label>
+          <div class="explain">Дұрыс жауап: A. Альдегидтер Толленс реактивін тотықсыздандырып, күміс бөледі.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Альдегидті Cu(OH)₂-пен қыздырғанда байқалатын белгі:</p>
+          <label class="option"><input type="radio" name="o6q4" value="0"> Күлгін түс</label>
+          <label class="option"><input type="radio" name="o6q4" value="1"> Ақ тұнба</label>
+          <label class="option"><input type="radio" name="o6q4" value="2"> Бром суының қоңырлануы</label>
+          <label class="option"><input type="radio" name="o6q4" value="3"> Кірпіш-қызыл Cu₂O тұнбасы</label>
+          <label class="option"><input type="radio" name="o6q4" value="4"> Қара тұнба ғана</label>
+          <div class="explain">Дұрыс жауап: D. Альдегидтер Cu(OH)₂-ті Cu₂O-ға дейін тотықсыздандырады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Көпатомды спиртті анықтауға тән белгі:</p>
+          <label class="option"><input type="radio" name="o6q5" value="0"> Ag айнасының түзілуі</label>
+          <label class="option"><input type="radio" name="o6q5" value="1"> Cu(OH)₂-пен ашық көк ерітінді түзілуі</label>
+          <label class="option"><input type="radio" name="o6q5" value="2"> FeCl₃-пен қан-қызыл түс</label>
+          <label class="option"><input type="radio" name="o6q5" value="3"> CO₂ бөлінуі</label>
+          <label class="option"><input type="radio" name="o6q5" value="4"> BaSO₄ тұнбасы түзілуі</label>
+          <div class="explain">Дұрыс жауап: B. Глицерин сияқты көпатомды спирттер Cu(OH)₂-пен ашық көк ерітінді береді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Карбон қышқылы карбонатпен әрекеттескенде қандай белгі байқалады?</p>
+          <label class="option"><input type="radio" name="o6q6" value="0"> Күміс айна түзіледі</label>
+          <label class="option"><input type="radio" name="o6q6" value="1"> Күлгін түс пайда болады</label>
+          <label class="option"><input type="radio" name="o6q6" value="2"> Көк тұнба түзіледі</label>
+          <label class="option"><input type="radio" name="o6q6" value="3"> Бром суы түссізденеді</label>
+          <label class="option"><input type="radio" name="o6q6" value="4"> CO₂ газы бөлінеді</label>
+          <div class="explain">Дұрыс жауап: E. Карбон қышқылы карбонатпен әрекеттескенде көмірқышқыл газы бөлінеді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Ақуыздарға тән биурет реакциясының белгісі:</p>
+          <label class="option"><input type="radio" name="o6q7" value="0"> Ақ тұнба</label>
+          <label class="option"><input type="radio" name="o6q7" value="1"> Сары жалын</label>
+          <label class="option"><input type="radio" name="o6q7" value="2"> Күлгін түс</label>
+          <label class="option"><input type="radio" name="o6q7" value="3"> CO₂ бөлінуі</label>
+          <label class="option"><input type="radio" name="o6q7" value="4"> Қара түтін</label>
+          <div class="explain">Дұрыс жауап: C. Биурет реакциясында ақуыз сілтілік ортада Cu²⁺ иондарымен күлгін түс береді.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Қай сәйкестік дұрыс?</p>
+          <label class="option"><input type="radio" name="o6q8" value="0"> Фенол — FeCl₃-пен күлгін түс</label>
+          <label class="option"><input type="radio" name="o6q8" value="1"> Алкан — бром суын бірден түссіздендіреді</label>
+          <label class="option"><input type="radio" name="o6q8" value="2"> Карбон қышқылы — күміс айна береді</label>
+          <label class="option"><input type="radio" name="o6q8" value="3"> Альдегид — BaSO₄ тұнбасын береді</label>
+          <label class="option"><input type="radio" name="o6q8" value="4"> Ақуыз — AgCl тұнбасын береді</label>
+          <div class="explain">Дұрыс жауап: A. Фенолды FeCl₃ арқылы күлгін түспен анықтауға болады.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block6')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block7" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">7</div>
+        <div>
+          <h2>Жинақ тест</h2>
+          <p>
+            Органикалық химияның негізгі тақырыптары бойынша қысқа қорытынды тест:
+            изомерия, көмірсутектер, ароматты қосылыстар, оттекті және азотты
+            қосылыстар, сапалық реакциялар.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block7', 'theory')">Нұсқаулық</button>
+        <button onclick="openTab(event, 'block7', 'formula')">Қайталау</button>
+        <button onclick="openTab(event, 'block7', 'terms')">Тақырып</button>
+        <button onclick="openTab(event, 'block7', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Қорытынды қайталау</summary>
+          <p>
+            Бұл тест органикалық химия бойынша негізгі ұғымдарды тексереді. Әр сұрақтан
+            кейін түсіндірме беріледі. Қате кеткен тақырыпты жоғарыдағы блоктардан
+            қайта қарап шық.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Алкандар: CₙH₂ₙ₊₂</div>
+          <div class="formula">Алкендер: CₙH₂ₙ</div>
+          <div class="formula">Алкиндер: CₙH₂ₙ₋₂</div>
+          <div class="formula">Бензол: C₆H₆</div>
+          <div class="formula">Спирттер: R–OH</div>
+          <div class="formula">Альдегидтер: R–CHO</div>
+          <div class="formula">Карбон қышқылдары: R–COOH</div>
+          <div class="formula">Аминдер: R–NH₂</div>
+          <div class="formula">Аминқышқыл: NH₂–R–COOH</div>
+          <div class="formula">Пептидтік байланыс: –CO–NH–</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Көмірсутектер</b>
+            <p>Тек көміртек пен сутектен тұратын органикалық қосылыстар.</p>
+          </div>
+
+          <div class="term">
+            <b>Функционалдық топ</b>
+            <p>Органикалық қосылыстың негізгі қасиетін анықтайтын атомдар тобы.</p>
+          </div>
+
+          <div class="term">
+            <b>Изомерия</b>
+            <p>Формуласы бірдей, құрылысы әртүрлі заттардың болуы.</p>
+          </div>
+
+          <div class="term">
+            <b>Сапалық реакция</b>
+            <p>Затты немесе функционалдық топты анықтауға арналған реакция.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block7Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. C₄H₁₀ қай класқа жатады?</p>
+          <label class="option"><input type="radio" name="o7q1" value="0"> Алкен</label>
+          <label class="option"><input type="radio" name="o7q1" value="1"> Алкин</label>
+          <label class="option"><input type="radio" name="o7q1" value="2"> Алкан</label>
+          <label class="option"><input type="radio" name="o7q1" value="3"> Арен</label>
+          <label class="option"><input type="radio" name="o7q1" value="4"> Спирт</label>
+          <div class="explain">Дұрыс жауап: C. C₄H₁₀ формуласы CₙH₂ₙ₊₂ жалпы формуласына сәйкес келеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. C₂H₄ бром суын түссіздендіреді, себебі:</p>
+          <label class="option"><input type="radio" name="o7q2" value="0"> Құрамында —OH тобы бар</label>
+          <label class="option"><input type="radio" name="o7q2" value="1"> Қаныққан көмірсутек</label>
+          <label class="option"><input type="radio" name="o7q2" value="2"> Ароматты сақинасы бар</label>
+          <label class="option"><input type="radio" name="o7q2" value="3"> Қышқылдық қасиет көрсетеді</label>
+          <label class="option"><input type="radio" name="o7q2" value="4"> Қос байланысы бар</label>
+          <div class="explain">Дұрыс жауап: E. Этен қос байланыс бойынша бромды қосып алады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Бензолдың формуласы:</p>
+          <label class="option"><input type="radio" name="o7q3" value="0"> C₆H₆</label>
+          <label class="option"><input type="radio" name="o7q3" value="1"> C₆H₁₂</label>
+          <label class="option"><input type="radio" name="o7q3" value="2"> C₂H₂</label>
+          <label class="option"><input type="radio" name="o7q3" value="3"> C₂H₆</label>
+          <label class="option"><input type="radio" name="o7q3" value="4"> CH₄</label>
+          <div class="explain">Дұрыс жауап: A. Бензол — C₆H₆ формулалы ароматты көмірсутек.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Этанолға тән функционалдық топ:</p>
+          <label class="option"><input type="radio" name="o7q4" value="0"> —CHO</label>
+          <label class="option"><input type="radio" name="o7q4" value="1"> —COOH</label>
+          <label class="option"><input type="radio" name="o7q4" value="2"> —NH₂</label>
+          <label class="option"><input type="radio" name="o7q4" value="3"> —OH</label>
+          <label class="option"><input type="radio" name="o7q4" value="4"> —NO₂</label>
+          <div class="explain">Дұрыс жауап: D. Этанол — спирт, құрамында гидроксил тобы бар.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. CH₃COOH қай класқа жатады?</p>
+          <label class="option"><input type="radio" name="o7q5" value="0"> Альдегид</label>
+          <label class="option"><input type="radio" name="o7q5" value="1"> Карбон қышқылы</label>
+          <label class="option"><input type="radio" name="o7q5" value="2"> Амин</label>
+          <label class="option"><input type="radio" name="o7q5" value="3"> Алкан</label>
+          <label class="option"><input type="radio" name="o7q5" value="4"> Арен</label>
+          <div class="explain">Дұрыс жауап: B. CH₃COOH — сірке қышқылы, құрамында —COOH тобы бар.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Альдегидтерге тән сапалық реакция:</p>
+          <label class="option"><input type="radio" name="o7q6" value="0"> FeCl₃-пен күлгін түс</label>
+          <label class="option"><input type="radio" name="o7q6" value="1"> Бром суын түссіздендіру</label>
+          <label class="option"><input type="radio" name="o7q6" value="2"> CO₂ бөлу</label>
+          <label class="option"><input type="radio" name="o7q6" value="3"> Биурет реакциясы</label>
+          <label class="option"><input type="radio" name="o7q6" value="4"> Күміс айна реакциясы</label>
+          <div class="explain">Дұрыс жауап: E. Альдегидтер Толленс реактивімен күміс айна береді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Аминдерге тән функционалдық топ:</p>
+          <label class="option"><input type="radio" name="o7q7" value="0"> —COOH</label>
+          <label class="option"><input type="radio" name="o7q7" value="1"> —OH</label>
+          <label class="option"><input type="radio" name="o7q7" value="2"> —NH₂</label>
+          <label class="option"><input type="radio" name="o7q7" value="3"> —CHO</label>
+          <label class="option"><input type="radio" name="o7q7" value="4"> —COO—</label>
+          <div class="explain">Дұрыс жауап: C. Аминдердің функционалдық тобы — амин тобы.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Аминқышқылдардың амфотерлі болуының себебі:</p>
+          <label class="option"><input type="radio" name="o7q8" value="0"> —NH₂ және —COOH топтарының қатар болуы</label>
+          <label class="option"><input type="radio" name="o7q8" value="1"> Тек бензол сақинасының болуы</label>
+          <label class="option"><input type="radio" name="o7q8" value="2"> Тек қос байланыстың болуы</label>
+          <label class="option"><input type="radio" name="o7q8" value="3"> Тек көмірсутек қаңқасының болуы</label>
+          <label class="option"><input type="radio" name="o7q8" value="4"> Тек галоген атомының болуы</label>
+          <div class="explain">Дұрыс жауап: A. Амин тобы негіздік, карбоксил тобы қышқылдық қасиет береді.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Ақуыздарға тән биурет реакциясының белгісі:</p>
+          <label class="option"><input type="radio" name="o7q9" value="0"> Ақ тұнба</label>
+          <label class="option"><input type="radio" name="o7q9" value="1"> Кірпіш-қызыл тұнба</label>
+          <label class="option"><input type="radio" name="o7q9" value="2"> Күміс айна</label>
+          <label class="option"><input type="radio" name="o7q9" value="3"> Күлгін түс</label>
+          <label class="option"><input type="radio" name="o7q9" value="4"> Бром суының түссізденуі</label>
+          <div class="explain">Дұрыс жауап: D. Биурет реакциясында ақуыз күлгін түс береді.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Пептидтік байланыс қай түрде жазылады?</p>
+          <label class="option"><input type="radio" name="o7q10" value="0"> —O—</label>
+          <label class="option"><input type="radio" name="o7q10" value="1"> —CO–NH—</label>
+          <label class="option"><input type="radio" name="o7q10" value="2"> —C≡C—</label>
+          <label class="option"><input type="radio" name="o7q10" value="3"> —NO₂</label>
+          <label class="option"><input type="radio" name="o7q10" value="4"> —Cl</label>
+          <div class="explain">Дұрыс жауап: B. Ақуыздарда аминқышқылдар пептидтік байланыс арқылы қосылады.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block7')">Тестті тексеру</button>
+      </div>
+    </section>
+
+    <div class="copyright-note">
+      © Назерке. Барлық құқық қорғалған. Материалды рұқсатсыз көшіруге,
+      сатуға, қайта таратуға немесе коммерциялық мақсатта қолдануға болмайды.
+    </div>
+
+    <footer>
+      Органикалық химия · КТ-ға дайындық · Битемирова · Сейітжанов · Назарбекова
+    </footer>
+
+  </div>
+
+  <script>
+    function openTab(event, blockId, tabName) {
+      const block = document.getElementById(blockId);
+      const contents = block.querySelectorAll(".tab-content");
+      const buttons = block.querySelectorAll(".mini-tabs button");
+
+      contents.forEach(content => {
+        content.classList.remove("active");
+      });
+
+      buttons.forEach(button => {
+        button.classList.remove("active");
+      });
+
+      const selected = block.querySelector('.tab-content[data-tab="' + tabName + '"]');
+
+      if (selected) {
+        selected.classList.add("active");
+      }
+
+      event.currentTarget.classList.add("active");
+    }
+
+    function checkBlock(blockId) {
+      const block = document.getElementById(blockId);
+      const questions = block.querySelectorAll(".question");
+      const result = block.querySelector(".result");
+
+      let correctCount = 0;
+      let answeredCount = 0;
+
+      questions.forEach(question => {
+        const correctAnswer = question.getAttribute("data-answer");
+        const options = question.querySelectorAll(".option");
+        const explanation = question.querySelector(".explain");
+        const selectedInput = question.querySelector("input[type='radio']:checked");
+
+        options.forEach(option => {
+          option.classList.remove("correct", "wrong");
+        });
+
+        if (explanation) {
+          explanation.classList.add("show");
+        }
+
+        options.forEach(option => {
+          const input = option.querySelector("input");
+
+          if (!input) return;
+
+          if (input.value === correctAnswer) {
+            option.classList.add("correct");
+          }
+
+          if (selectedInput && input.checked && input.value !== correctAnswer) {
+            option.classList.add("wrong");
+          }
+        });
+
+        if (selectedInput) {
+          answeredCount++;
+
+          if (selectedInput.value === correctAnswer) {
+            correctCount++;
+          }
+        }
+      });
+
+      const total = questions.length;
+      const percent = Math.round((correctCount / total) * 100);
+
+      let message = "";
+
+      if (percent >= 90) {
+        message = "Өте жақсы нәтиже. Негізгі органикалық химия жақсы меңгерілген.";
+      } else if (percent >= 70) {
+        message = "Жақсы нәтиже. Қате кеткен сұрақтардың түсіндірмесін қайта қарап шық.";
+      } else if (percent >= 50) {
+        message = "Орташа нәтиже. Теория мен реакцияларды тағы бір рет қайталау керек.";
+      } else {
+        message = "Бұл бөлімді қайта оқу қажет. Алдымен теорияны оқып, кейін тестті қайта орында.";
+      }
+
+      result.innerHTML =
+        '<div class="score">' + correctCount + ' / ' + total + '</div>' +
+        '<div>Жауап берілген сұрақтар: ' + answeredCount + ' / ' + total + '</div>' +
+        '<div>Нәтиже: ' + percent + '%</div>' +
+        '<p style="margin-top:8px;">' + message + '</p>';
+
+      result.classList.add("show");
+
+      result.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+  </script>
+</body>
+</html>
